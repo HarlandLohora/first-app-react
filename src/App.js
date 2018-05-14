@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import react from "./assets/logo.png"
+import Home from "./components/Home";
 const harland = "https://media.licdn.com/dms/image/C4E03AQGXFMXlW2kJgQ/profile-displayphoto-shrink_200_200/0?e=1531958400&v=beta&t=D9pDwcUc2MaaQB9vWwQOj1zT6hH6-zt_NpyuGGkmou0";
 
 class App extends Component {
@@ -19,10 +20,13 @@ class App extends Component {
         <h1>{this.state.name}</h1>
         {this.state.favMovies.map(m=>{
           return(
-          <p>{m}</p>
+          <div>
+            <Home text={m}/>
+          </div>
           );
         })}
         <img src={harland}/>
+        <Home />
       </div>
     );
   }
